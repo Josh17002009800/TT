@@ -1,0 +1,47 @@
+to do tonight 
+create tables for user,sales,order
+do the time card
+
+SALES
+product_id 11 (inventory)
+transac_id
+customer_name 100 (account)
+customer_id 100 (account)
+item_name 50 (inventory)
+stock 11 (inventory)
+price 11 (inventory)
+status 11
+description 200
+date (order)
+time (order)
+
+Users
+id_user
+user_name
+password
+control number(order)
+product_name(inventory)
+price(inventory)
+
+Inventory
+product_id
+product_name
+stock
+price
+
+orders
+order_id
+timestamp
+user_name(user)
+control_number
+product_name(inventory)
+price(inventory)
+quantity
+
+time stamp post
+link tables then 
+auto fill when you enter keywords
+create forms(FIGMA)
+create forms(CODE)
+post(FIGMA)
+post(CODE)
