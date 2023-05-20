@@ -32,17 +32,16 @@ require 'ads/cons.php';
 <body>
   
 <div class='bod'>
-          <!--
-
-<h1>Content here</h1>
+          
+<ul>
+    <li> user </li>
+</ul>
 
 <div class="container">
 <div class="red"></div>
 </div>
 
-
 </div>
--->
 
 </body>
 </html>
