@@ -85,6 +85,16 @@ body {
     display: flex;
 }
 
+.bod {
+    background-color: whitesmoke;
+    height: 50px;
+    width: auto;
+}
+
+.bod li {
+    color: white;
+}
+
 @media only screen and (max-width: 900px) and (min-width: 300px) {
     .red {
         background-color: red;
