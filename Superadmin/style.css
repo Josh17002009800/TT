@@ -1,106 +1,99 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&family=Poppins:ital,wght@0,300;1,200&family=Public+Sans:wght@300;400;500;600;700&family=Ysabeau:wght@200;300;400;500;600;700&display=swap');
-
-/* !!ADMIN CSS!! */
-
-* {
-    padding: 0%;
-    margin: 0%;
-    font-family: sans-serif;
-}
-
-body {
-    background-image: linear-gradient(to right, #ebf8fa, #8fb5fa);
-}
-
-.nav {
-    width: 45px;
-    height: 100%;
-    background: white;
-    transition: width .5s;
-    position: fixed;
-    box-shadow: 1px 0px 3px #edeff2;
-    float: left;
-    overflow: hidden;
-    transition-duration: 0.2s;
-    transition-delay: 0.2s;
-    z-index: 1;
-}
-
-.nav ul {
-    list-style-type: none;
-    position: absolute;
-    top: 80px;
-    padding-left: 1px;
-    width: 90%;
-}
-
-.nav a {
-    padding-left: 30px;
-    text-decoration: none;
-    color: black;
-    font-size: 15px;
-}
-
-.nav li {
-    padding: 15px;
-    cursor: pointer;
-}
-
-.nav:hover {
-    width: 200px;
-}
-
-.bod {
-    padding-left: 100px;
-    font-size: 9px;
-}
-
-.nav i {
-    padding-left: 1px;
-    position: fixed;
-}
-
-.nav img {
-    width: 45px;
-    margin: 5px;
-}
-
-.logo h3 {
-    font-size: 20px;
-    padding-left: 60px;
-    padding-top: 1px;
-}
-
-.nav li:hover {
-    background-color: whitesmoke;
-    border-radius: 10%;
-}
-
-.last {
-    position: relative;
-    top: 200px;
-}
-
-.container {
-    display: flex;
-}
-
-.bod {
-    background-color: whitesmoke;
-    height: 50px;
-    width: auto;
-}
-
-.bod li {
-    color: white;
-}
-
-@media only screen and (max-width: 900px) and (min-width: 300px) {
-    .red {
-        background-color: red;
-        width: 10cm;
-        height: 70em;
-        position: relative;
-        right: 50px;
+    @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&family=Poppins:ital,wght@0,300;1,200&family=Public+Sans:wght@300;400;500;600;700&family=Ysabeau:wght@200;300;400;500;600;700&display=swap');
+    /* !!ADMIN CSS!! */
+    
+    * {
+        padding: 0%;
+        margin: 0%;
+        font-family: sans-serif;
     }
+    
+    a {
+        text-decoration: none;
+        color: rgb(173, 172, 172);
+    }
+    
+    body {
+        background-color: #fafbfe;
+    }
+    
+    .topnav {
+        background-color: white;
+        height: 60px;
+        width: auto;
+        border-bottom: 1px solid rgb(189, 189, 189);
+    }
+    
+    .topnav img {
+        padding: 5px;
+        margin-left: 15px;
+        height: 50px;
+    }
+    
+    #last {
+        float: right;
+        padding: 10px;
+    }
+    
+    #rotate {
+        position: fixed;
+        transition-delay: .5s;
+        transition-duration: .5s;
+    }
+    
+    #rotate:hover {
+        transform: rotate(180deg);
+    }
+    
+    #space {
+        padding: 20px;
+    }
+    
+    .sidenav {
+        position: fixed;
+        width: 45px;
+        height: 100%;
+        background-color: white;
+        transition-delay: 0.1s;
+        transition-duration: 0.2s;
+        overflow: hidden;
+        border-right: 1px solid rgb(189, 189, 189);
+        z-index: 1;
+    }
+    
+    .sidenav:hover {
+        width: 200px;
+    }
+    
+    .sidenav li {
+        position: relative;
+        list-style-type: none;
+        padding: 10px;
+        left: 35px;
+    }
+    
+    .sidenav i {
+        position: fixed;
+        left: 15px;
+    }
+    
+    a:hover {
+        color: #8fb5fa;
+    }
+    
+    .sidenav a.active {
+        color: #8fb5fa;
+    }
+    /* 
+.sidenav a {
+    text-decoration: none;
 }
+
+.sidenav li {
+    position: relative;
+    top: 10px;
+    left: 1px;
+    padding: 30px;
+    list-style-type: none;
+} */
+    
+    @media only screen and (max-width: 900px) and (min-width: 300px) {}
