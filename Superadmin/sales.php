@@ -12,8 +12,10 @@ require 'ads/cons.php';
     <title>Document</title>
 </head>
 <body>
-<span>Sales</span>
- 
+  <DIV class="name">
+ <span>SALES</span>
+ </DIV>
+  <a href="salesadd.php" class="add">Add Test<i class="bi bi-plus-square-dotted"></i></a>
  <!-- main -->
       <div class="box1" > 
       
@@ -21,6 +23,14 @@ require 'ads/cons.php';
         <thead>
           <tr>
             <th scope="col">Transac ID</th>
+            <!-- <th scope="col">Product Id</th> -->
+            <th scope="col">order id</th>
+            <!-- <th scope="col">User id</th> -->
+            <!-- <th scope="col">User Name</th> -->
+            <!-- <th scope="col">Product name</th> -->
+            <th scope="col">order name</th>
+            <th scope="col">quantity</th>
+            <th scope="col">Date & Time</th>
             <th scope="col">Status</th>
             <th scope="col">Description</th>
           </tr>
@@ -29,18 +39,26 @@ require 'ads/cons.php';
     <?php
     #this is what you need to output result
 
-    $sql ='select * from sales;';
+    $sql ='select * from sales INNER JOIN orders ON transac_id = order_id ;';
     $view_sales = mysqli_query($conn,$sql);
         while ($row = mysqli_fetch_assoc($view_sales)){
-            $transac_id = $row['transac_id'];
-            $status = $row['status'];
-            $description = $row['description'];
+          $transac_id = $row['transac_id'];
+          $order_id = $row['order_id'];
+          $order_name = $row['order_name'];
+          $qty = $row['qty'];
+          $datetime = $row['datetime'];
+          $status = $row['status'];
+          $description = $row['description']; 
             
-            echo"<tr>";
-            echo"<th>{$transac_id}</th>";
-            echo"<th>{$status}</th>";
-            echo"<th>{$description}</th>";
-            echo"</tr>";
+          echo"<tr>";
+          echo"<th>{$transac_id}</th>";
+          echo"<th>{$order_id}</th>";
+          echo"<th>{$order_name}</th>";
+          echo"<th>{$qty}</th>";
+          echo"<th>{$datetime}</th>";
+          echo"<th>{$status}</th>";
+          echo"<th>{$description}</th>";
+          echo"</tr>";
         }
     
     ?>
@@ -49,49 +67,10 @@ require 'ads/cons.php';
 </table>    
       </div>
 
-      <?php
-if(isset($_POST['create']))
-{
-    $status =  $_POST['status'];
-    $description =  $_POST['description'];
 
-    $query = "INSERT INTO sales (status,description) VALUES ('$status','$description')";
-    $add_sales = mysqli_query($conn,$query); 
-
-    if(!$add_sales){
-        echo "<script type= 'text/javascript'> alert('something went wrong!')</script>". mysqli_error($conn);
-    }
-    else {
-        echo "<script type='text/javascript'>alert('user added successfully!')</script>";
-    }
-    echo "<meta http-equiv='refresh' content='0'>";
-
-}
-?>
       <!-- space :) -->
-          <div class="box2" >
-   
-  <form action="sales.php" method="POST">
-  <div class="form-row" >
+         
 
-    <div class="dot"> <!-- pending this is not final for status -->
-    <div class="form-group col-md-3">
-      <label for="status">status</label>
-      <input type="status" class="form-control" name="status" id="status" placeholder="status" >
-    </div>
-  </div>
-  <div class="zero">
-    <div class="form-group col-md-3">
-      <label for="description">description</label>
-      <input type="description" class="form-control" name="description" id="description" placeholder="description">
-    </div>
-    </div>
-    
-  </div>
-  <input type="submit" name="create" class="btn btn-primary" id="submit" value="submit">
-  </div>
-</form>
 
-</div>
 </body>
 </html>
