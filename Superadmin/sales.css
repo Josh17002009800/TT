@@ -6,26 +6,28 @@
 }
 
 .box1 {
-    border-radius: 5px;
+    border-radius: 20px;
     margin-left: 60px;
-    width: 90%;
-    height: 500px;
+    width: 95%;
+    height: 600px;
     background-color: white;
+    box-shadow: 1px 1px 1px 1px #eeeff6;
 }
-
-
-/* input*/
 
 .add {
     width: 100px;
     margin-left: 300px;
 }
 
+
+/* pages*/
+
+.page {
+    float: left;
+}
+
 @media only screen and (min-width: 300px) and (max-width: 900px) {
     .box1 {
-        top: 10px;
-        width: 200px;
-        height: 500px;
-        right: 25px;
+        width: 50%;
     }
 }
